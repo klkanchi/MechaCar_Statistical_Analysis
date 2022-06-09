@@ -16,3 +16,30 @@ summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_cleara
 #Additional Step: eliminate the independent variables that have little impact on predicting mpg to see impact:
 lm(mpg ~ vehicle_length + ground_clearance, data=mecha_mpg)
 summary(lm(mpg ~ vehicle_length + ground_clearance, data=mecha_mpg))
+
+##################################################################
+#Deliverable 2:
+  
+#2. Import and read in the Suspension_Coil.csv file as a table
+mecha_coil <- read.csv(file='./Resources/Suspension_Coil.csv',check.names=F,stringsAsFactors = F) 
+
+#3. Create a total_summary dataframe using the summarize() function to get the mean, median, variance, and standard deviation of the suspension coil’s PSI column.
+total_summary <- mecha_coil %>% summarize(Mean_PSI=mean(PSI),
+                                          Median_PSI=median(PSI),
+                                          Var_PSI=var(PSI),
+                                          Std_Dev_PSI=sd(PSI),
+                                          Num_Coil=n(), .groups = 'keep') 
+#4. Create a lot_summary dataframe using the group_by() and the summarize() functions to group each manufacturing lot.                                                                
+lot_summary <- mecha_coil  %>% group_by(Manufacturing_Lot) %>% summarize(Mean_PSI=mean(PSI),
+                                                                         Median_PSI=median(PSI),
+                                                                         Var_PSI=var(PSI),
+                                                                         Std_Dev_PSI=sd(PSI),
+                                                                         Num_Coil=n(), .groups = 'keep')                                      
+
+#box plot: PSI Whole lot
+plt1 <- ggplot(mecha_coil,aes(y=PSI)) #import dataset into ggplot2
+plt1 + geom_boxplot() #add boxplot
+
+#box plot: PSI each individual Lot
+plt2 <- ggplot(mecha_coil,aes(x=Manufacturing_Lot,y=PSI)) #import dataset into ggplot2
+plt2 + geom_boxplot()
