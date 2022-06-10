@@ -34,7 +34,7 @@ If we remove the less impactful independent variables (vehicle weight, spoiler a
 
 ________________
 
-## Delivearble2
+## Deliverable2
 
 **Boxplot using ggplot2**
 
@@ -52,7 +52,7 @@ When looking at the entire population of the production lot, the variance of the
 Similarly, but significantly more consistent, Lot 1 and Lot 2 are well within the 100 PSI variance requirement; with variances of 0.98 and 7.47 respectively. However, it is Lot 3 that is showing much larger variance in performance and consistency, with a variance of 170.29. It is Lot 3 that is disproportionately causing the variance at the full lot level.
 
 
-## Delivearble3
+## Deliverable3
 There is a summary of the t-test results across all manufacturing lots d3
 
 From here we can see the true mean of the sample is 1498.78, which we also saw in the summary statistics above. With a p-Value of 0.06, which is higher than the common significance level of 0.05, there is NOT enough evidence to support rejecting the null hypothesis. That is to say, the mean of all three of these manufacturing lots is statistically similar to the presumed population mean of 1500.
