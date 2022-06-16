@@ -15,11 +15,11 @@ Resulting lm Model:
 
 **mpg = (6.267)vehicle_length + (0.0012)vehicle_weight + (0.0688)spoiler_angle + (3.546)ground_clearance + (-3.411)AWD + (-104.0)**
 
-![lm_model.png](https://github.com/klkanchi/MechaCar_Statistical_Analysis/tree/main/Resources/images/lm_model.png)
+![lm_model.png](Resources/images/lm_model.png)
 
-![linear_regression_all.png](https://github.com/klkanchi/MechaCar_Statistical_Analysis/tree/main/Resources/images/linear_regression_all.png)
+![linear_regression_all.png](Resources/images/linear_regression_all.png)
 
-![linear_regression_filtered.png](https://github.com/klkanchi/MechaCar_Statistical_Analysis/tree/main/Resources/images/linear_regression_filtered.png)
+![linear_regression_filtered.png](Resources/images/linear_regression_filtered.png)
 
 From the above output we can see that:
 
@@ -41,7 +41,7 @@ ________________
 The Suspension Coil dataset provided for the MechaCar contains the results of testing the weight capacities of multiple suspension coils from multiple production lots to determine consistency.
 
 
- ![Summary_statistics_PSI.png](https://github.com/klkanchi/MechaCar_Statistical_Analysis/tree/main/Resources/images/Summary_statistics_PSI.png)
+ ![Summary_statistics_PSI.png](Resources/images/Summary_statistics_PSI.png)
 
 With the understanding that the design specifications for the MechaCar suspension coils mandate that the variance of the suspension coils cannot exceed 100 pounds per square inch (PSI) .
 
@@ -67,5 +67,13 @@ d3
 
 How does this information help? Clearly, something went awry in Lot 3's production cycle. The process needs to be checked for system fails and the suspension coils from this lot need to be inspected to remove those not meeting quality criteria.
 
+## Deliverable 4: 
 
+Hypothesis: Null and Alternative
+After determining which factors are key for the MechaCar's genre:
 
+**Null Hypothesis (Ho)**: MechaCar is priced correctly based on its performance of key factors for its genre.
+**Alternative Hypothesis (Ha)**: MechaCar is NOT priced correctly based on performance of key factors for its genre.
+
+#### Statistical Tests
+A multiple linear regression would be used to determine the factors that have the highest correlation/predictability with the list selling price (dependent variable); which combination has the greatest impact on price (it may be all of them!)
